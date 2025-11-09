@@ -1,4 +1,4 @@
-Algoritmo "API"
+Algoritmo "API: Calculadora"
 
 Var
 
