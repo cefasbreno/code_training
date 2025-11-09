@@ -1,4 +1,4 @@
-Algoritmo "API: Calculadora de Sequências Lógicas"
+Algoritmo "API"
 
 Var
 
@@ -25,9 +25,13 @@ Var
    // Sequencia de fibonacci
    primeiro_termo_fib, segundo_termo_fib, proximo_termo_fib, contador_fib: inteiro
 
+   // Sequencia de fatoriais
+   n_fat, i_fat, t_fat: inteiro
+   fatorial_fat: real
+
 Inicio
 
-   enquanto (opcao <> 7) faca
+   enquanto (opcao <> 8) faca
 
       escreval ("------MENU CALCULADORA-------")
       escreval ("")
@@ -37,7 +41,8 @@ Inicio
       escreval (" 04 - Sequência Alternada")
       escreval (" 05 - Sequência de Tribonacci")
       escreval (" 06 - Sequência de Fibonacci")
-      escreval (" 07 - Sair")
+      escreval (" 07 - Sequência de Fatoriais")
+      escreval (" 08 - Sair")
       escreval ("")
       escreval ("-----------------------------")
       leia (opcao)
@@ -258,6 +263,29 @@ Inicio
          escreval ("")
 
       caso 7
+
+         escreva("Digite um n�mero para ver a sua sequ�ncia fatorial: ")
+         leia(n_fat)
+
+         enquanto n_fat < 0 faca
+            escreval("Erro: S� � possivel calcular o fatorial de n�meros positivos.")
+            leia (n_fat)
+         fimenquanto
+
+         escreval("Sequ�ncia Fatorial de 0! at� ", n_fat, "! ")
+
+         para i_fat de 0 ate n_fat faca
+
+            fatorial_fat <- 1
+
+            para t_fat de i_fat ate 2 passo -1 faca
+               fatorial_fat <- fatorial_fat * t_fat
+            fimpara
+
+            escreval(i_fat, "! = ", fatorial_fat:10:0)
+         fimpara
+
+      caso 8
 
       fimescolha
 
